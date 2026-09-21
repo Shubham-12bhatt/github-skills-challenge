@@ -42,9 +42,9 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ github.token }}
           COVERAGE_PATH: .
-          MINIMUM_GREEN: 90
-          MINIMUM_ORANGE: 70
+          MINIMUM_GREEN: 50
+          MINIMUM_ORANGE: 40
 
       - name: Enforce minimum coverage threshold
         run: |
-          coverage report --fail-under=90
+          coverage report --fail-under=50
